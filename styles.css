@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    font-family: 'Montserrat';
+    color: hsl(228, 12%, 48%);
+    font-size: 16px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "first second";
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+/* FIRST component */
+.first-component {
+    grid-area: first;
+    background-image: url('/images/image-product-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* SECOND component */
+.second-component {
+    grid-area: second;
+    padding: 30px;
+}
+
+.second-component h4 {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    letter-spacing: 5px;
+    padding-bottom: 20px;
+}
+
+.second-component h1 {
+    font-family: 'Fraunces';
+    line-height: 2rem;
+    padding-bottom: 20px;
+    color: hsl(212, 21%, 14%);
+}
+
+.second-component p {
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+.price span.newprice {
+    font-family: 'Fraunces';
+    font-size: 30px;
+    color: hsl(158, 36%, 37%);
+}
+
+.price span.oldprice {
+    text-decoration: line-through;
+}
+
+.second-component a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    background-color: hsl(158, 36%, 37%);
+    padding: 15px 0;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* UTILITIES */
+.bold {
+    font-weight: 700;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 475px){
+    .wrapper {
+        grid-template-columns: 100%;
+        grid-template-areas: "first" "second";
+    }
+
+    .first-component {
+        height: 300px;
+        background-position: center;
+    }
+}
+
